@@ -53,14 +53,14 @@ export const Services = () => {
                                 : "bg-white border-white shadow-sm hover:shadow-card hover:-translate-y-1"
                                 }`}
                         >
-                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 text-white ${service.highlight ? "bg-white/20" : "bg-primary-blue/10 text-primary-blue"}`}>
+                            <div className={`w-12 h-12 rounded-xl flex items-center justify-center mb-6 ${service.highlight ? "bg-white/20 text-white" : "bg-primary-blue/10 text-primary-blue"}`}>
                                 <service.icon className="w-6 h-6" />
                             </div>
 
                             <h3 className={`text-xl font-bold mb-3 ${service.highlight ? "text-white" : "text-primary-navy"}`}>
                                 {service.title}
                             </h3>
-                            <p className={`mb-6 leading-relaxed ${service.highlight ? "text-white/90" : "text-text-secondary"}`}>
+                            <p className={`mb-6 leading-relaxed ${service.highlight ? "text-white/95 font-medium" : "text-slate-600"}`}>
                                 {service.description}
                             </p>
 

@@ -5,6 +5,15 @@ import { motion } from "framer-motion";
 import { BadgeCheck, ShieldCheck, Clock, Star, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BookingForm } from "@/components/features/BookingForm";
+import { UserAvatars } from "@/components/ui/user-avatars";
+
+const HAPPY_CLIENTS = [
+    { id: 1, name: "Maria Garcia", image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" },
+    { id: 2, name: "David Johnson", image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" },
+    { id: 3, name: "Sarah Williams", image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=150&auto=format&fit=crop" },
+    { id: 4, name: "Michael Chen", image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=150&auto=format&fit=crop" },
+    { id: 5, name: "Emma Smith", image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=150&auto=format&fit=crop" },
+];
 
 export const HeroBooking = () => {
     return (
@@ -62,11 +71,7 @@ export const HeroBooking = () => {
                                     </button>
                                 </Link>
                                 <div className="flex items-center gap-4 px-4">
-                                    <div className="flex -space-x-3">
-                                        {[1, 2, 3].map(i => (
-                                            <div key={i} className="w-10 h-10 rounded-full border-2 border-white bg-slate-200" />
-                                        ))}
-                                    </div>
+                                    <UserAvatars users={HAPPY_CLIENTS} size={40} maxVisible={3} overlap={40} />
                                     <div className="text-sm font-medium">
                                         <span className="block text-white font-bold">2,400+</span>
                                         <span className="text-white/70">Happy Clients</span>
