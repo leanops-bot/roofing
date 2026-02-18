@@ -4,7 +4,18 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Plus, Minus } from 'lucide-react';
 
-const faqs = [
+interface FAQItem {
+    q: string;
+    a: string;
+}
+
+interface FAQSectionProps {
+    faqs?: FAQItem[];
+    title?: string;
+    subtitle?: string;
+}
+
+const defaultFaqs = [
     {
         q: "How long does a roof replacement take?",
         a: "Most residential replacements take 1–2 days depending on size and weather. We work efficiently to minimize disruption to your home."
@@ -23,15 +34,19 @@ const faqs = [
     }
 ];
 
-export const FAQSection = () => {
+export const FAQSection = ({
+    faqs = defaultFaqs,
+    title = "Common Questions",
+    subtitle = "Everything you need to know before hiring a roofer."
+}: FAQSectionProps) => {
     const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     return (
         <section className="py-24 bg-white">
             <div className="container-custom max-w-4xl">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-navy">Common Questions</h2>
-                    <p className="text-text-secondary">Everything you need to know before hiring a roofer.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-primary-navy">{title}</h2>
+                    <p className="text-text-secondary">{subtitle}</p>
                 </div>
 
                 <div className="space-y-4">

@@ -17,9 +17,17 @@ export default function AboutPage() {
                             Roofing Built on <br />
                             <span className="text-primary-blue">Trust & Craftsmanship</span>
                         </h1>
-                        <p className="text-white text-lg md:text-xl leading-relaxed max-w-2xl">
+                        <p className="text-white text-lg md:text-xl leading-relaxed max-w-2xl mb-8">
                             For over 25 years, we've set the standard for residential and commercial roofing in Florida. We don't just build roofs; we build protection that lasts a lifetime.
                         </p>
+                        <div className="flex flex-wrap gap-4">
+                            <a href="/contact" className="bg-primary-blue text-primary-navy px-8 py-4 rounded-full font-bold shadow-lg hover:bg-white transition-all transform hover:-translate-y-1">
+                                Contact Our Team
+                            </a>
+                            <a href="/services" className="border border-white/20 bg-white/5 text-white px-8 py-4 rounded-full font-bold hover:bg-white/10 transition-all backdrop-blur-sm">
+                                Explore Services
+                            </a>
+                        </div>
                     </div>
                 </div>
             </section>

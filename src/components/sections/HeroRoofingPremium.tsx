@@ -179,7 +179,7 @@ export const HeroRoofingPremium = () => {
                     </svg>
                 </div>
 
-                <Navbar />
+                {/* Navbar removed to use global Navbar from layout */}
 
                 <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-0 min-h-[700px]">
                     {/* LEFT COLUMN */}
@@ -247,13 +247,27 @@ export const HeroRoofingPremium = () => {
                             className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 mt-8"
                         >
                             <UserAvatars users={HAPPY_CLIENTS} size={40} maxVisible={4} overlap={40} />
-                            <div className="text-sm text-slate-600 font-medium">
-                                <div className="flex items-center gap-1 text-primary-blue">
-                                    <Star className="w-4 h-4 fill-current" />
-                                    <span className="font-bold text-primary-navy">4.9</span>
-                                    <span>(2,300+ Reviews)</span>
+                            <div className="px-4 py-2 rounded-full bg-[#0b0b0b] border border-white/10 shadow-lg flex items-center gap-3 z-20 relative">
+                                <span className="text-white font-semibold text-sm">4.9</span>
+                                <div className="flex gap-0.5">
+                                    {[1, 2, 3, 4].map((i) => (
+                                        <svg key={i} className="w-5 h-5 text-yellow-500 fill-yellow-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" />
+                                        </svg>
+                                    ))}
+                                    {/* Half Star (Clipped) */}
+                                    <div className="relative w-5 h-5">
+                                        <svg className="w-5 h-5 text-gray-700 fill-gray-700 absolute inset-0" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" />
+                                        </svg>
+                                        <div className="absolute inset-0 overflow-hidden w-[80%]">
+                                            <svg className="w-5 h-5 text-yellow-500 fill-yellow-500" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" fill="currentColor" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
-                                <p>Verified Customers</p>
+                                <span className="text-white font-medium text-xs">(2,300+ Reviews)</span>
                             </div>
                         </motion.div>
 

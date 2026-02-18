@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   description: "High-quality residential and commercial roofing with warranty-backed craftsmanship.",
 };
 
-// import { Navbar } from "@/components/layout/Navbar";
+import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 
 // ... existing imports
@@ -41,7 +41,7 @@ export default function RootLayout({
       <body
         className={`${sora.variable} ${inter.variable} ${poppins.variable} font-inter antialiased bg-bg-soft text-primary-navy`}
       >
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
         <Footer />
       </body>
