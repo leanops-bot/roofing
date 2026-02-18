@@ -4,6 +4,8 @@ import React from "react";
 import { motion } from "framer-motion";
 import { MapPin, Info, ArrowRight, Navigation } from "lucide-react";
 
+const MAPBOX_TOKEN = process.env.NEXT_PUBLIC_MAPBOX_TOKEN || "";
+
 export const MapProjects = () => {
     return (
         <section className="py-24 bg-white relative">
