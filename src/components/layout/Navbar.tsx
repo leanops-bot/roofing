@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { PhoneCall, Menu, X, Mountain, ChevronDown, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -40,6 +41,10 @@ export const Navbar = () => {
     const [isServicesOpen, setIsServicesOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
+    const pathname = usePathname();
+    const isLightPage = ['/book', '/privacy', '/terms', '/cookies'].includes(pathname);
+    const isSolid = scrolled || isLightPage;
+
     useEffect(() => {
         const handleScroll = () => setScrolled(window.scrollY > 20);
         window.addEventListener("scroll", handleScroll);
@@ -55,10 +60,11 @@ export const Navbar = () => {
         <motion.nav
             className={cn(
                 "fixed top-0 left-0 right-0 z-[100] transition-all duration-500",
-                scrolled
+                isSolid
                     ? "bg-primary-navy/95 backdrop-blur-xl border-b border-border-dark py-3"
                     : "bg-transparent py-6"
             )}
+
         >
             <div className="container-custom flex items-center justify-between">
                 {/* Logo */}

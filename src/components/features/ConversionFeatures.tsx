@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { Phone, FileText, X, AlertCircle } from "lucide-react";
 
@@ -24,10 +25,10 @@ export const ConversionFeatures = () => {
         <>
             {/* Floating Buttons */}
             <div className="fixed bottom-8 left-8 z-[90] md:left-12">
-                <button className="flex items-center gap-3 bg-primary-blue text-primary-navy px-6 py-4 rounded-full font-black shadow-glow-blue hover:bg-white hover:scale-105 transition-all group">
+                <Link href="/book" className="flex items-center gap-3 bg-primary-blue text-primary-navy px-6 py-4 rounded-full font-black shadow-glow-blue hover:bg-white hover:scale-105 transition-all group">
                     <FileText className="w-5 h-5" />
                     <span className="hidden sm:inline uppercase text-xs tracking-widest">Get Estimate</span>
-                </button>
+                </Link>
             </div>
 
             <div className="fixed bottom-8 right-8 z-[90] md:right-12">

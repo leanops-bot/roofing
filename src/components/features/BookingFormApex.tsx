@@ -35,8 +35,8 @@ export const BookingFormApex = ({ className }: { className?: string }) => {
                 <div className="mb-8">
                     <div className="flex justify-between items-start mb-2 mt-2">
                         <h3 className="text-2xl font-black text-white">Book Consultation</h3>
-                        <div className="bg-[#0b0b0b] px-3 py-1 rounded-full border border-yellow-400/40 shadow-md">
-                            <span className="text-[10px] font-bold text-yellow-400 uppercase tracking-widest">Step {step} of 3</span>
+                        <div className="bg-[#0b0b0b] px-3 py-1 rounded-full border border-yellow-400/40 shadow-md whitespace-nowrap shrink-0">
+                            <span className="text-[10px] sm:text-xs font-bold text-yellow-400 uppercase tracking-widest">Step {step} of 3</span>
                         </div>
                     </div>
                     <p className="text-sm text-white/80 font-medium">Fast callback within 15 minutes.</p>
