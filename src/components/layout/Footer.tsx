@@ -127,9 +127,9 @@ export const Footer = () => {
                 <div className="border-t border-border-dark pt-10 flex flex-col md:flex-row justify-between items-center gap-6 text-[10px] uppercase font-bold tracking-widest text-text-muted/50">
                     <p>© {currentYear} Apex Roofing. All rights reserved.</p>
                     <div className="flex gap-8">
-                        <Link href="#" className="hover:text-primary-blue transition-colors">Privacy Policy</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Terms of Service</Link>
-                        <Link href="#" className="hover:text-white transition-colors">Cookie Policy</Link>
+                        <Link href="/privacy" className="hover:text-primary-blue transition-colors">Privacy Policy</Link>
+                        <Link href="/terms" className="hover:text-white transition-colors">Terms of Service</Link>
+                        <Link href="/cookies" className="hover:text-white transition-colors">Cookie Policy</Link>
                     </div>
                 </div>
             </div>

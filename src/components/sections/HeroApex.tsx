@@ -2,6 +2,7 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { Star, BadgeCheck, ShieldCheck, Clock, ArrowRight, Play } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { BookingFormApex } from "@/components/features/BookingFormApex";
@@ -62,16 +63,16 @@ export const HeroApex = () => {
                             </p>
 
                             <div className="flex flex-wrap gap-6 items-center mb-12">
-                                <button className="h-16 px-10 rounded-full bg-primary-blue text-primary-navy font-black hover:bg-white transition-all shadow-[0_20px_50px_rgba(30,115,255,0.3)] hover:-translate-y-1 active:scale-[0.98] flex items-center gap-3 group">
+                                <Link href="/book" className="h-16 px-10 rounded-full bg-primary-blue text-primary-navy font-black hover:bg-white transition-all shadow-[0_20px_50px_rgba(30,115,255,0.3)] hover:-translate-y-1 active:scale-[0.98] flex items-center gap-3 group">
                                     Book Free Roof Inspection
                                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                                </button>
-                                <button className="flex items-center gap-3 text-white font-bold hover:text-primary-blue transition-colors group">
+                                </Link>
+                                <Link href="/projects" className="flex items-center gap-3 text-white font-bold hover:text-primary-blue transition-colors group">
                                     <div className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-primary-blue/10 transition-colors">
                                         <Play className="w-4 h-4 fill-white group-hover:fill-primary-blue group-hover:text-primary-blue" />
                                     </div>
                                     View Our Projects
-                                </button>
+                                </Link>
                             </div>
 
                             {/* Trust signals stack */}
@@ -96,7 +97,7 @@ export const HeroApex = () => {
                     </div>
 
                     {/* RIGHT COLUMN: SaaS Booking Card */}
-                    <div className="hidden lg:block">
+                    <div className="block mt-12 lg:mt-0">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9, x: 50 }}
                             animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -106,12 +107,12 @@ export const HeroApex = () => {
                             <BookingFormApex className="relative z-10" />
 
                             {/* Decorative background for the card */}
-                            <div className="absolute -inset-4 bg-primary-blue/20 rounded-[40px] blur-3xl -z-10 animate-pulse" />
+                            <div className="absolute -inset-4 bg-primary-blue/20 rounded-[40px] blur-3xl -z-10 animate-pulse hidden lg:block" />
 
                             {/* Floating badge */}
-                            <div className="absolute -right-12 top-10 flex flex-col items-center justify-center w-28 h-28 bg-white text-primary-navy rounded-full shadow-2xl z-20 font-black rotate-12 border-4 border-primary-blue animate-bounce">
-                                <span className="text-2xl leading-none">FREE</span>
-                                <span className="text-[8px] tracking-[0.2em] leading-none mt-1">INSPECTION</span>
+                            <div className="absolute -right-4 -top-6 lg:-right-12 lg:top-10 flex flex-col items-center justify-center w-20 h-20 lg:w-28 lg:h-28 bg-white text-primary-navy rounded-full shadow-2xl z-20 font-black rotate-12 border-4 border-primary-blue animate-bounce">
+                                <span className="text-xl lg:text-2xl leading-none">FREE</span>
+                                <span className="text-[6px] lg:text-[8px] tracking-[0.2em] leading-none mt-1">INSPECTION</span>
                             </div>
                         </motion.div>
                     </div>
